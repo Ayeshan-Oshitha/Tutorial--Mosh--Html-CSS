@@ -1,0 +1,15 @@
+.box1 {
+  width: 400px;
+  height: 200px;
+  background: lightgreen;
+  border: 10px solid red;
+  border-top: 20px solid blue;
+}
+
+.box1 {
+  width: 400px;
+  height: 200px;
+  background: lightgreen;
+  border: 10px solid red;
+  border-radius: 20px;
+}

@@ -1,0 +1,41 @@
+.box1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to bottom right, dodgerblue, yellow);
+  margin-bottom: 20px;
+}
+
+.box2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, dodgerblue, yellow);
+  margin-bottom: 20px;
+}
+
+.box3 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, dodgerblue, yellow 40%);
+  margin-bottom: 20px;
+}
+
+.box4 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, dodgerblue, yellow, tomato);
+  margin-bottom: 20px;
+}
+
+.box5 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, white, yellow);
+  margin-bottom: 20px;
+}
+
+.box6 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at top left, white, yellow);
+  margin-bottom: 20px;
+}

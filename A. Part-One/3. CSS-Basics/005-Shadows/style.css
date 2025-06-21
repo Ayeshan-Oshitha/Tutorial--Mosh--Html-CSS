@@ -1,0 +1,33 @@
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  box-shadow: 10px 10px green; /* 10px from right, 10px from bottom, green color */
+  margin-bottom: 25px;
+}
+
+.box2 {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  box-shadow: 10px 10px 30px green; /* 10px from right, 10px from bottom, soften the shadow, green color */
+  margin-bottom: 25px;
+}
+
+.box3 {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 30px green; /* 10px from right, 10px from bottom, soften the shadow, green color */
+  margin-bottom: 25px;
+}
+
+.text1 {
+  color: aqua;
+  text-shadow: 3px 3px 5px black; /* 3px from right, 3px from bottom, soften the shadow, black color */
+}
+
+.text2 {
+  color: aqua;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* 3px from right, 3px from bottom, soften the shadow, black color */
+}
