@@ -166,6 +166,8 @@ With **`absolute positioning`**, we can position an element **relative to its co
 
 If we want to position an element **relative to the viewport** (so it stays in the same place even when the page is scrolled), we can use **`position: fixed`**.
 
+(see the style file for actual codes)
+
 Note - (Chatgpt) - **`position: sticky`** lets an element stay at the top (or side) of the screen **while scrolling**, but **only inside its parent**. It **starts in its normal position** (like `static`), then when you scroll and it reaches a set point (like `top: 0`), it sticks in place. Once the parent container scrolls out of view, the sticky element also **scrolls away (disappears)** with it.
 
 <img src="../Images/image-6.png" width="800">
@@ -189,3 +191,163 @@ right: 2rem;
 ```
 
 In this case, the **width** of the box is automatically calculated based on the space between the left and right (2rem on each side), since both `left` and `right` are set.
+
+# Floating
+
+To make an element float, we can use the `float` property with values like `left` or `right`. When an element is floated, other elements will automatically wrap(float) around it.
+
+If you want to prevent elements from wrapping around a floated element, you can use the clear property. Adding `clear: both` makes sure that the element starts on a new line, below any floated elements on the left or right.
+
+---
+
+### Problem with Using Float: Parent Collapsing
+
+When you use `float` on child elements, there's one major issue: the **parent element may collapse.**
+
+By default, floated elements are **not recognized** by their parent’s height. That means the parent acts like the floated children don’t exist — so it may appear to have no height at all.
+
+This happens because the parent only adjusts its height based on **non-floated elements** inside it.
+
+<img src="../Images/image-7.png" width="800">
+
+There are three ways to solve this issue. The first two methods are good and proper ways to clear floats and solve the problem. However, the third method — using overflow — is considered a hack and is not recommended (see the style file for actual codes).
+
+1. **Using a clear class** – In this method, we add a new `<div>` with a `clear` style at the end of the parent container. This extra `div` helps clear the float and ensures the parent wraps around its floated children. Whenever we use `float`, we should create a general "clearfix" class and apply it to every container that uses floated elements. This is a good method, but the downside is that we are adding a meaningless extra `div` just for layout purposes.
+
+2. **Using pseudo-selectors** – In this method, we create a general clearfix class using a pseudo-element (like `::after`) and apply it to the parent element. This is also a good method. The advantage here is that we don't need to create any additional HTML elements — everything is handled with CSS.
+
+3. **Using overflow on the parent** – In this approach, we set the overflow property on the parent container to a value other than visible (like hidden or auto). This forces the parent to contain the floated children. However, this is not considered a good method. It’s more of a hack and can lead to unexpected layout issues, so it's generally best to avoid using this approach.
+
+**Note:** Float was commonly used in the past to create layouts. However, modern tools like Flexbox and CSS Grid make building layouts much easier and more efficient.
+
+# FlexBox
+
+<img src="../Images/image-8.png" width="800">
+
+To apply Flexbox, we use `display: flex` on the container.
+
+The `flex-direction` property controls the direction of the items. Its possible values are:
+
+- **row** (default): items are placed in a horizontal row from left to right.
+- **row-reverse**: items are in a row but from right to left.
+- **column**: items are stacked vertically from top to bottom.
+- **column-reverse**: items are stacked vertically from bottom to top.
+
+---
+
+## Aligning Items
+
+To align items in Flexbox, it's important to understand the concept of **axes**. In Flexbox, there are two axes:
+
+- **Main axis** (Primary): This is the direction defined by the flex-direction property (e.g., row or column).
+- **Cross axis** (Secondary): This is the axis perpendicular to the main axis.
+
+<img src="../Images/image-9.png" width="800">
+
+Using these axes, we can easily align items inside the container.
+
+When aligning items in Flexbox, there are two important properties to remember:
+
+- **justify-content**
+- **align-items**
+
+<img src="../Images/image-10.png" width="800">
+
+### Common values of justify-content
+
+- **flex-start**
+- **flex-end**
+- **center**
+- **space-between**
+- **space-around**
+- **space-evenly**
+
+### Common values of align-items
+
+- **flex-start**
+- **flex-end**
+- **center**
+
+---
+
+The **align-content** property only works when there are multiple lines of items in the flex container.
+
+By default, Flexbox items try to shrink and fit into a single line. We can control this behavior using the `flex-wrap` property.The default value of `flex-wrap` is `nowrap`, which means all items try to fit into a single line. If we use `flex-wrap: wrap`, items will keep their original size, and any extra items that don't fit will automatically move to a new line.
+
+The `align-content` property only works when there are **multiple lines** of items inside a Flexbox container.
+
+When items wrap into multiple lines, we can't control the spacing between the lines using `align-items`. Instead, we use `align-content` to control the alignment and spacing **between the rows**. (actually, we can control alignment with align-items, but the spacing between lines is not good)
+
+My Note : When we have **multiple lines** of flex items (because of wrapping), we should use **`align-content`** to control the spacing and alignment between the lines instead of `align-items`.
+
+### Common values of align-content
+
+- **flex-start (default)**
+- **flex-end**
+- **center**
+- **space-between**
+- **space-around**
+- **space-evenly**
+
+---
+
+My Note : If we want to change the alignment of an individual element **along the cross axis** in Flexbox, we use the `align-self` property. (The `justify-self` property **does not work** with Flexbox—it only works with Grid items. As alternative we can use `margin-left:auto` or `margin-right:auto`)
+
+---
+
+## Sizing Items
+
+<img src="../Images/image-11.png" width="800">
+
+The `flex` property is a shorthand for setting `flex-grow`, `flex-shrink`, and `flex-basis` together. This property should be applied to **flex items**, not to the flex container.
+
+- In `row direction` , `flex-basis` overrides the `width` of the flex items. In `column direction`, `flex-basis` overrides the `height` of the flex items.
+
+- The `flex-grow` property allows an element to take up the available space within a flex container. In `row direction`, it increases the element's `width`. In `column direction` (vertical), it increases the element's `height`.
+
+( How **flex-grow** works - If there are `three items` in a flex container and their `flex-grow` values are `3, 1, and 1` respectively, the total grow value is `5`. This means the available space will be divided into `5 equal parts`. The first item will take 3 parts, while the second and third items will each take 1 part. However, this doesn’t necessarily mean the first box will be exactly three times larger than the second and third boxes, because the final size also depends on their initial (base) sizes and other CSS properties like padding, margins, or min/max widths. )
+
+- `flex-shrink` is the opposite of flex-grow. Flex-shrink controls how much an item can shrink when there is not enough space in the flex container.
+
+**The default values for `flex-grow` and `flex-shrink` in CSS are:**
+
+- `flex-grow: 0` – By default, items _do not grow_ to fill available space.
+- `flex-shrink: 1` – By default, items _can shrink_ if there's not enough space.
+
+So, unless you explicitly set them, a flex item:
+
+- Won’t expand to fill extra space (`flex-grow: 0`)
+- Will shrink to avoid overflow if needed (`flex-shrink: 1`)
+
+# Grid
+
+<img src="../Images/image-12.png" width="800">
+
+To define a CSS Grid layout, we first need a container element. On this container, we apply the below properties.
+
+```css
+.container {
+  display: grid;
+  /* 3 x 2 */
+  grid-template-rows: repeat(3, 100px); /* same as - 100px 100px 100px */
+  grid-template-columns: repaet(2, 100px); /* same as - 100px 100px  */
+}
+```
+
+For a shorter way to define both rows and columns in a CSS Grid, we can use the below syntax.
+
+```css
+.container {
+  display: grid;
+  /* 3 x 2 */
+  grid-template-: repeat(3, 100px) / repaet(2, 100px);
+}
+```
+
+Notes : When a parent container is set as a grid, its child elements are automatically **placed into the grid cells** in order (row by row or column by column, depending on the direction) regardless of their individual sizes (unless you manually specify their positions).
+
+## Aligning Items
+
+There are two main properties used to adjust items within a grid.
+
+<img src="../Images/image-13.png" width="800">

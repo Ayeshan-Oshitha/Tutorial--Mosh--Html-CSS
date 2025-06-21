@@ -1,0 +1,17 @@
+.container {
+  border: 3px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1.5rem;
+}

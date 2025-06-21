@@ -1,0 +1,17 @@
+/* Solve Option - 1 */
+
+.tweet {
+  border: 3px solid lightgrey;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  float: left;
+  margin-right: 5px;
+}
+
+.clearfix {
+  clear: both;
+}

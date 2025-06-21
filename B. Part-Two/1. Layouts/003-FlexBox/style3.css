@@ -1,0 +1,20 @@
+.container {
+  border: 3px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 10rem;
+  flex-grow: 1;
+  height: 5rem;
+  background: gold;
+  margin: 1.5rem;
+}
+
+.box-one {
+  flex-grow: 3;
+}

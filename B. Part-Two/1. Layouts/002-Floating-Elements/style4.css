@@ -1,0 +1,14 @@
+/* Solve Option - 3 */
+
+.tweet {
+  border: 3px solid lightgrey;
+  overflow: hidden; /* This will solve the problem */
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  float: left;
+  margin-right: 5px;
+}

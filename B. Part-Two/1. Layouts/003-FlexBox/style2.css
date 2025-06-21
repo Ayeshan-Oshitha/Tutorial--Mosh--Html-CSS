@@ -1,0 +1,19 @@
+.container {
+  border: 3px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1.5rem;
+}
+
+.box-one {
+  align-self: flex-start;
+}
