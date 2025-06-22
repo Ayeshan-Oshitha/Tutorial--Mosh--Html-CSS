@@ -344,10 +344,150 @@ For a shorter way to define both rows and columns in a CSS Grid, we can use the 
 }
 ```
 
-Notes : When a parent container is set as a grid, its child elements are automatically **placed into the grid cells** in order (row by row or column by column, depending on the direction) regardless of their individual sizes (unless you manually specify their positions).
+Note: When a parent container is set to use a CSS grid layout, its child elements are **automatically placed into grid cells** in order—either row by row or column by column, depending on the specified direction. Each item starts from the **top-left corner of its assigned grid cell**, regardless of its size. If an item’s size is larger than the grid cell, it may overflow or overlap with other elements, unless additional styling is applied to control sizing or positioning.
 
 ## Aligning Items
 
 There are two main properties used to adjust items within a grid.
 
 <img src="../Images/image-13.png" width="800">
+
+- `justify-items` : Aligns each individual item horizontally within its own grid cell.
+- `align-items` : Aligns each individual item vertically within its own grid cell.
+- `justify-content` : Aligns the entire grid horizontally within the grid container.
+- `align-content` : Aligns the entire grid vertically within the grid container.
+
+The default value for both `justify-items` and `align-items` is **`stretch`**. This means that if you don’t set a specific width or height for the items, they(each item) will **automatically expand to fill the entire width and height of their grid cells**.
+
+---
+
+```css
+.container {
+  display: grid;
+  /* Wrong way */
+  grid-template-: repeat(3, 100px) / 100px 30% 70%;
+}
+```
+
+The total column width can exceed the actual width of the container. This is because ((percentage)) values (like 30% and 70%) are **based on the container’s full width**, not the remaining available space after fixed values (like 100px) are applied.
+
+To avoid this issue, it's better to use **`fractional units (fr)`** instead of percentages. Fractions represent **portions of the remaining space**, making the layout more flexible and responsive.
+
+```css
+.container {
+  display: grid;
+  /* Correct way */
+  grid-template-: repeat(3, 100px) / 100px 30fr 70fr;
+}
+```
+
+If we want a grid area (row or column) to take up all the remaining available space, we can use **auto** or **1fr**, depending on the context.
+
+- `1fr` always takes a portion of the available space after fixed sizes are assigned.
+- `auto` take the size based on the content of grid or take the remaining available space based on the context.
+
+#### Example 1 -
+
+```css
+.container {
+  display: grid;
+  /* First row and third row - 100px / 
+  Second row - takes all the available space */
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 30fr 70fr;
+  height: 100vh;
+  grid-template-: repeat(3, 100px) / 100px 30fr 70fr;
+}
+```
+
+#### Example 2 -
+
+```css
+.container {
+  display: grid;
+  /* First row and third row - 100px 
+   Second row - takes all the available space */
+  grid-template-rows: 100px auto 100px;
+  grid-template-columns: 30fr 70fr;
+  height: 100vh;
+  grid-template-: repeat(3, 100px) / 100px 30fr 70fr;
+}
+```
+
+#### Example 3 -
+
+```css
+.container {
+  display: grid;
+  /* Third row: 100px  
+   Second row: height based on content of  cell  
+   First row: takes all remaining available space */
+  grid-template-rows: 1fr auto 100px;
+  grid-template-columns: 30fr 70fr;
+  height: 100vh;
+  grid-template-: repeat(3, 100px) / 100px 30fr 70fr;
+}
+```
+
+---
+
+## Gap
+
+<img src="../Images/image-14.png" width="300">
+
+## Placing Items
+
+<img src="../Images/image-15.png" width="500">
+
+`grid-area` is a shorthand property that combines both `grid-row` and `grid-column` in one line. It is **applied to individual grid items**, not to the entire grid container.
+
+```css
+.box-one {
+  grid-column: 1 / 3; /* or 1 / span 2; */
+  grid-row: 1 / 3; /* or 1 / span 2; */
+
+  /* 1 / 3 - Strat from first line to go up to 3rd lines ( 2 grid sells)
+  1 / span 2 - Start from first line and take up 2 grid cells ( same as above ) */
+}
+```
+
+When we manually place grid items, it can affect the position of other items .
+
+`grid-area` syntax --> .
+
+```css
+.box-one {
+  grid-area: 1 / 1 / 1 / 3;
+  /*   start-row / start-column / end-row /  end-column   */
+}
+```
+
+## Placing Items in Named Areas
+
+By using named grid areas, we can define specific sections of the grid and then assign items to those sections by name.
+
+<img src="../Images/image-16.png" width="500">
+
+We define `grid-template-areas` on the **container** to create named layout sections, and use `grid-area` on **individual items** to place them into those named areas.
+
+In `grid-template-areas`, if we put a dot (`.`), that area will be kept empty.
+
+# Hiding Elements
+
+There are two ways to hide elements:
+
+- `display: none` — completely hides the element and removes its space from the layout.
+
+- `visibility: hidden` — hides the element, but keeps its space in the layout.
+
+# Media Queries
+
+With **media queries**, we can apply different styles based on a device’s features like screen size, orientation, and more. This allows us to build websites that look great on **mobiles, tablets, and desktops**. These are called **responsive websites** because they adapt to different screen sizes.
+
+There are two common approaches to building responsive websites:
+
+- **Desktop-first**: Start with styles for larger screens, then adjust for tablets and mobiles.
+
+- **Mobile-first**: Start with styles for small screens, then adjust for tablets and desktops.
+
+The majority of the web development community prefers the mobile-first approach.

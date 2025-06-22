@@ -1,0 +1,21 @@
+/* grid example  - Placing Items */
+
+.container {
+  display: grid;
+  grid-template-rows: 150px 1fr 150px;
+  grid-template-columns: 3fr 7fr 3fr;
+  height: 100vh;
+  border: 3px solid lightgrey;
+  gap: 10px;
+}
+
+.box {
+  background-color: gold;
+}
+
+/* Note - In here The "E" box applies this color, because this comes after .box. SO ORDER MATTERS */
+.box-five {
+  background-color: lightcoral;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}

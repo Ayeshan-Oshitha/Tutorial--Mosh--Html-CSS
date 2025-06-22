@@ -1,0 +1,17 @@
+/* grid example  - fraction */
+
+.container {
+  display: grid;
+  /* 3 x 2 */
+  grid-template-rows: 150px 1fr 150px;
+  grid-template-columns: 3fr 7fr;
+  height: 100vh;
+  border: 3px solid lightgrey;
+}
+
+.box {
+  margin: 0.5rem;
+  width: 6rem;
+  height: 5rem;
+  background-color: gold;
+}

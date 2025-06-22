@@ -1,14 +1,19 @@
+/* grid example */
+
 .container {
   display: grid;
   /* 3 x 2 */
   grid-template-rows: repeat(3, 150px);
   grid-template-columns: repeat(2, 150px);
   border: 3px solid lightgrey;
+  height: 100vh;
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .box {
-  width: 10rem;
+  width: 6rem;
   height: 5rem;
   background-color: gold;
-  margin: 1rem;
 }
