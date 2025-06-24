@@ -491,3 +491,9 @@ There are two common approaches to building responsive websites:
 - **Mobile-first**: Start with styles for small screens, then adjust for tablets and desktops.
 
 The majority of the web development community prefers the mobile-first approach.
+
+Note : Media queries don’t automatically override each other. Only the last matching rule in the CSS will apply if multiple queries match
+
+If you use **Desktop-First approach**: Use `max-width` media queries. Start your styles for larger screens first, then adjust for smaller screens
+
+If you use **Mobile-First approach**: Use `min-width` media queries. Start with styles for small screens, then add styles for larger screens.

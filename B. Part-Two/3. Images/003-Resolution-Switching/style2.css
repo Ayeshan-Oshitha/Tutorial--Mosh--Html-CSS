@@ -1,0 +1,15 @@
+.meal {
+  width: 25vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .meal {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .meal {
+    width: 100vw;
+  }
+}
