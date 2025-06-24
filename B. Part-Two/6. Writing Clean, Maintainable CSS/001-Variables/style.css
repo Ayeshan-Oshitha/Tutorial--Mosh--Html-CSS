@@ -1,0 +1,12 @@
+:root {
+  --primary-color: ##ffdd36;
+  --border-radius: 10px;
+}
+
+.one {
+  background: var(--primary-color);
+}
+
+.two {
+  background: var(--primary-color);
+}
