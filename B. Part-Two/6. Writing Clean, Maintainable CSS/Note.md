@@ -15,7 +15,6 @@
     - Typography
     - Layout
     - Forms
-    - Components
 
 3.  **Avoid over-specific selectors**  
      Keep selectors simple and flexible. For example, avoid:
