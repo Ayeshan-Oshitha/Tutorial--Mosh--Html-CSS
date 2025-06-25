@@ -12,4 +12,14 @@
 
 # Tips
 
-Because mobile screens are small, We use larger fonts for body text or links, So they are more readable
+Since mobile screens are small, we use larger fonts for body text and links to improve readability.
+
+---
+
+<img src="./Images/image-1.png" width="600">
+
+In the bottom-up approach, we design each component or element in isolation and then combine them to build the complete pages.
+
+In contrast, the top-down approach starts at the page level, where we build the entire layout first and then work on individual elements. This can often lead to layout issues that are harder to debug and may become time-consuming to fix.
+
+---
