@@ -506,6 +506,8 @@ a {
   }
 }
 
+/* Callout */
+
 .callout {
   padding: 4rem;
   border-radius: 5px;
@@ -543,4 +545,40 @@ a {
     justify-self: start;
     margin: 0 3rem;
   }
+}
+
+/* Collapsibles */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+}
+
+.collapsible-chevron {
+  transform: (-90deg);
+  transition: transform 0.15s ease-in-out;
+}
+
+.collapsible__content {
+  display: none;
+
+  /* max-height: 0;
+  overflow: hidden; 
+  opacity: 0;
+  transition: max-height 0.3s; */
+}
+
+.collpasible--expanded .collapsible-chevron {
+  transform: rotate(0);
+}
+
+.collpasible--expanded .collapsible__content {
+  display: block;
+
+  /* max-height: 100vh; 
+   opacity: 1; */
 }
