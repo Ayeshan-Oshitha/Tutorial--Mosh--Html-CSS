@@ -9,3 +9,7 @@
 - Highlight Matching Tag – Highlights corresponding opening and closing HTML tags for easier readability.
 
 - ToDo Highlight – Highlights TODO and FIXME comments to help you track pending tasks in your code
+
+# Tips
+
+Because mobile screens are small, We use larger fonts for body text or links, So they are more readable
