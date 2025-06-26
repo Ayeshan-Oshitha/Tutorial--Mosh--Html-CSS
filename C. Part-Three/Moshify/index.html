@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="./CSS/normalize.css" />
     <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -171,7 +172,7 @@
         </p>
       </header>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="./Resources/icons/sprite.svg#easy"></use>
@@ -187,11 +188,16 @@
           <a href="" class="link-arrow">Learn More</a>
         </div>
         <!-- Should Optimize the Images -->
-        <img class="feature__image" src="./Resources/images/easy.jpg" alt="" />
+        <img
+          class="feature__image"
+          src="./Resources/images/easy.jpg"
+          alt=""
+          data-aos="zoom-in-left"
+        />
       </article>
 
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-left">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="./Resources/icons/sprite.svg#computer"></use>
@@ -207,11 +213,16 @@
           <a href="" class="link-arrow">Learn More</a>
         </div>
         <!-- Should Optimize the Images -->
-        <img class="feature__image" src="./Resources/images/easy.jpg" alt="" />
+        <img
+          class="feature__image"
+          src="./Resources/images/easy.jpg"
+          alt=""
+          data-aos="zoom-in-right"
+        />
       </article>
 
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="./Resources/icons/sprite.svg#wordpress"></use>
@@ -227,7 +238,12 @@
           <a href="" class="link-arrow">Learn More</a>
         </div>
         <!-- Should Optimize the Images -->
-        <img class="feature__image" src="./Resources/images/easy.jpg" alt="" />
+        <img
+          class="feature__image"
+          src="./Resources/images/easy.jpg"
+          alt=""
+          data-aos="zoom-in-left"
+        />
       </article>
     </section>
 
@@ -430,5 +446,9 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
