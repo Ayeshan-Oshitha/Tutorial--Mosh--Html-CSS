@@ -1,11 +1,11 @@
 # HTML & CSS - Part One
 
-## Web Development Fundamentals
+## 1. Web Development Fundamentals
 
 - Languages and Tools of Web Development
 - How the Web Works
 
-## HTML Basics
+## 2. HTML Basics
 
 - The Head Section
 - Text
@@ -19,12 +19,12 @@
 - Semantic Elements
 - Structuring a Web Page
 
-## CSS Basics
+## 3. CSS Basics
 
 - Providing CSS
 - Normalizing CSS
 - Basic Selectors
-- Relational Selectors=
+- Relational Selectors
 - Pseudo-class Selectors
 - Pseudo-element Selectors
 - Selectors Specificty
@@ -36,7 +36,7 @@
 
 # HTML & CSS - Part Two
 
-## Layout
+## 1. Layout
 
 - The Box Model
 - Sizing Elements
@@ -49,7 +49,7 @@
 - Hiding Elements
 - Media Queries
 
-## Typography
+## 2. Typography
 
 - Styling Fonts
 - Embedding Web Fonts
@@ -61,7 +61,7 @@
 - Horizontal Spacing
 - Formatting Text
 
-## Images
+## 3. Images
 
 - Image Types and Formats
 - Content Images
@@ -77,7 +77,7 @@
 - Scalable Vector Graphics
 - Font Icons
 
-## Forms
+## 4. Forms
 
 - Creating a Basic Form
 - Styling Forms
@@ -94,7 +94,7 @@
 - Data Validation
 - Submitting the Form
 
-## Transformations, Transitions, and Animations
+## 5. Transformations, Transitions, and Animations
 
 - Transformations
 - 3D Transformations
@@ -102,7 +102,7 @@
 - Animations
 - Reusable Animations
 
-## Writing Clean, Maintainable CSS
+## 6. Writing Clean, Maintainable CSS
 
 - CSS Best Practices
 - Variables
