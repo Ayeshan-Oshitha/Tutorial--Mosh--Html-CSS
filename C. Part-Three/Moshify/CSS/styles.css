@@ -7,6 +7,7 @@
   --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
+  --padding-vertical: 6rem;
 }
 
 *,
@@ -618,12 +619,12 @@ a {
 /* Blocks */
 
 .block {
-  --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
 }
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -827,11 +828,11 @@ a {
 
 /* my style */
 @media screen and (min-width: 768px) {
-  .block-showcase .grid {
-    gap: 0 2rem;
+  .block-showcase {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
   }
 
-  .block-showcase__image {
-    margin-top: 2rem;
+  .block-showcase .grid {
+    gap: 0 2rem;
   }
 }

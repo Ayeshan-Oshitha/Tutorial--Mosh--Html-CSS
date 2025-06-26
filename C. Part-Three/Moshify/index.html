@@ -14,70 +14,50 @@
     <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
-    <section class="block block--dark block--skewed-right block-showcase">
+    <section class="block">
       <header class="block__header">
-        <h2>User-friendly Control Panel</h2>
+        <h2>What our customers are saying</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+          officiis.
+        </p>
       </header>
-
-      <div class="container grid grid--1x2">
-        <div class="block-showcase__image">
-          <img src="./Resources/images/ipad.png" alt="" />
+      <div class="container">
+        <div class="card testimonial">
+          <div class="grid grid--1x2">
+            <div class="testimonial__image">
+              <img
+                src="./Resources/images/testimonial.jpg"
+                alt="A happy smiling Customer"
+              />
+              <span class="icon-container icon-container--accent">
+                <svg class="icon--small icon--white">
+                  <use xlink:href="./Resources/icons/sprite.svg#quotes"></use>
+                </svg>
+              </span>
+            </div>
+            <blockquote class="quote">
+              <p class="quote__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                accusantium optio sint aliquam, atque amet reprehenderit
+                cupiditate minima. Eum, blanditiis.
+              </p>
+              <footer>
+                <div class="media">
+                  <div class="media__image">
+                    <svg class="icon icon--primary quote__line">
+                      <use xlink:href="./Resources/icons/sprite.svg#line"></use>
+                    </svg>
+                  </div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">John Smith</h3>
+                    <p class="quote__organization">ABC Company</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
         </div>
-        <ul class="list">
-          <li>
-            <div class="media">
-              <div class="media__image">
-                <svg class="icon icon--primary">
-                  <use xlink:href="./Resources/icons/sprite.svg#easy"></use>
-                </svg>
-              </div>
-              <div class="media__body">
-                <h3 class="media__title">Easy Start & Managed Updates</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quisquam, ex nostrum vero voluptates dicta excepturi
-                  vel perspiciatis consequuntur ab.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="media">
-              <div class="media__image">
-                <svg class="icon icon--primary">
-                  <use xlink:href="./Resources/icons/sprite.svg#growth"></use>
-                </svg>
-              </div>
-              <div class="media__body">
-                <h3 class="media__title">Staging, GIT & WP-CLI</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quisquam, ex nostrum vero voluptates dicta excepturi
-                  vel perspiciatis consequuntur ab.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="media">
-              <div class="media__image">
-                <svg class="icon icon--primary">
-                  <use
-                    xlink:href="./Resources/icons/sprite.svg#wordpress"
-                  ></use>
-                </svg>
-              </div>
-              <div class="media__body">
-                <h3 class="media__title">Dynamic Caching & More</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quisquam, ex nostrum vero voluptates dicta excepturi
-                  vel perspiciatis consequuntur ab.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
       </div>
     </section>
 
