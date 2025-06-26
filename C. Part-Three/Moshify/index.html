@@ -23,12 +23,28 @@
           </p>
           <a href="" class="btn btn--accent btn--streched">Get Started</a>
         </div>
-        <img
-          class="hero__image"
-          src="./Resources/images/banner.png"
-          alt=""
-          class="src"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./Resources/images/banner@1x.webp 1x,
+              ./Resources/images/banner@2x.webp 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              ./Resources/images/banner@1x.png 1x,
+              ./Resources/images/banner@2x.png 2x
+            "
+          />
+          <img
+            class="hero__image"
+            src="./Resources/images/banner@1x.png"
+            alt=""
+            class="src"
+          />
+        </picture>
       </header>
     </section>
     <script src="main.js"></script>
