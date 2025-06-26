@@ -35,3 +35,10 @@ However, if we want to target only the button in the second grid column, we can 
 If height: 100vh is set, the element will take up the entire height of the viewport.
 
 However, if you use max-height: 100vh and the parent has a fixed height with overflow: hidden, then the child element will only be able to take the parent's height, not the full 100vh. Any extra height will be clipped and not visible.
+
+---
+
+`grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));`
+
+This creates columns automatically based on the number of elements in the grid. Each column will be at least 150px wide, but can grow to take up as much space as available (up to a fraction of the total row width).
+The number of columns will adjust based on the container’s width — more columns will fit on wider screens, fewer on smaller screens.
