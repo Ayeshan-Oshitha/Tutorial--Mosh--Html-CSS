@@ -135,7 +135,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -146,6 +145,7 @@ a {
 .list--tick {
   list-style-image: url(../Resources/icons/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -635,6 +635,12 @@ a {
   color: #7b858b;
 }
 
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: #fff;
+}
+
 .block--dark .block__heading {
   color: #fff;
 }
@@ -805,5 +811,27 @@ a {
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+
+/* Showcase Block */
+
+.block-showcase__image > img {
+  width: 100%;
+}
+
+/* my style */
+.block-showcase {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+/* my style */
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    gap: 0 2rem;
+  }
+
+  .block-showcase__image {
+    margin-top: 2rem;
   }
 }
