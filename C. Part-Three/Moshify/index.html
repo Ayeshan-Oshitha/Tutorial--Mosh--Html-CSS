@@ -14,52 +14,86 @@
     <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
-    <section class="block">
-      <header class="block__header">
-        <h2>What our customers are saying</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          officiis.
-        </p>
-      </header>
-      <div class="container">
-        <div class="card testimonial">
-          <div class="grid grid--1x2">
-            <div class="testimonial__image">
-              <img
-                src="./Resources/images/testimonial.jpg"
-                alt="A happy smiling Customer"
-              />
-              <span class="icon-container icon-container--accent">
-                <svg class="icon--small icon--white">
-                  <use xlink:href="./Resources/icons/sprite.svg#quotes"></use>
-                </svg>
-              </span>
-            </div>
-            <blockquote class="quote">
-              <p class="quote__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                accusantium optio sint aliquam, atque amet reprehenderit
-                cupiditate minima. Eum, blanditiis.
-              </p>
-              <footer>
-                <div class="media">
-                  <div class="media__image">
-                    <svg class="icon icon--primary quote__line">
-                      <use xlink:href="./Resources/icons/sprite.svg#line"></use>
-                    </svg>
-                  </div>
-                  <div class="media__body">
-                    <h3 class="media__title quote__author">John Smith</h3>
-                    <p class="quote__organization">ABC Company</p>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Products</h2>
+            <img
+              src="./Resources/icons/chevron.svg"
+              class="icon icon--primary collapsible__chevron"
+              alt="Chevron Icon"
+            />
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="">Website Hosting</a></li>
+              <li><a href="">Free Automated Wordpress</a></li>
+              <li><a href="">Migrations</a></li>
+            </ul>
           </div>
-        </div>
+        </section>
+
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Company</h2>
+            <img
+              src="./Resources/icons/chevron.svg"
+              class="icon icon--primary collapsible__chevron"
+              alt="Chevron Icon"
+            />
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="">About</a></li>
+              <li><a href="">Affiliates</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Support</h2>
+            <img
+              src="./Resources/icons/chevron.svg"
+              class="icon icon--primary collapsible__chevron"
+              alt="Chevron Icon"
+            />
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="">Contact</a></li>
+              <li><a href="">Knowledge Base</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Domains</h2>
+            <img
+              src="./Resources/icons/chevron.svg"
+              class="icon icon--primary collapsible__chevron"
+              alt="Chevron Icon"
+            />
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="">Domain Checker</a></li>
+              <li><a href="">Domain Transfer</a></li>
+              <li><a href="">Free Domain</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <footer class="footer__brand">
+          <img src="./Resources/images/logo.svg" alt="" />
+          <p class="footer__copyright">Copyright 2020 John Doe</p>
+        </footer>
       </div>
-    </section>
+    </footer>
 
     <script src="main.js"></script>
   </body>
