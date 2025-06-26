@@ -204,7 +204,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -299,6 +299,7 @@ a {
   display: flex;
   flex-grow: 1;
   padding: 1.5rem 2.5rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -387,7 +388,7 @@ a {
 
 .plan--popular .card__header::before {
   /* FIXME: Add the Image URL */
-  content: url();
+  content: url(../Resources/icons/popular.svg);
   width: 40px;
   display: inline-block;
   position: absolute;
@@ -764,13 +765,14 @@ a {
 
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
   max-width: 700px;
   margin: 0 auto;
+  color: var(--color-headings);
 }
 
 @media screen and (min-width: 768px) {
@@ -828,10 +830,6 @@ a {
 
 /* my style */
 @media screen and (min-width: 768px) {
-  .block-showcase {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
-  }
-
   .block-showcase .grid {
     gap: 0 2rem;
   }
