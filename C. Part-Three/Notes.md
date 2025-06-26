@@ -46,3 +46,11 @@ The number of columns will adjust based on the container’s width — more colu
 ---
 
 **`vertical-align`** is mainly used to align inline or inline-block elements vertically relative to the surrounding text or inline elements. It's commonly used in situations like aligning an icon or image with text.(Note: vertical-align does not work on block-level elements like `<div>` unless they are turned into inline or inline-block.)
+
+---
+
+# Building for Production
+
+<img src="./Images/image-2.png" width="400">
+
+<img src="./Images/image-3.png" width="400">
